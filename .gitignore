@@ -1,0 +1,6 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+data/raw/mnist-train-images.csv
+data/raw/mnist-train-labels.csv

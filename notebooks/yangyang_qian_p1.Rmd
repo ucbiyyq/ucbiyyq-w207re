@@ -1,0 +1,75 @@
+---
+title: "W207 Project 1"
+output: html_notebook
+---
+
+# Project 1: Digit Classification with KNN and Naive Bayes
+
+In this project, you'll implement your own image recognition system for classifying digits. Read through the code and the instructions carefully and add your own code where indicated. Each problem can be addressed succinctly with the included packages -- please don't add any more. Grading will be based on writing clean, commented code, along with a few short answers.
+
+As always, you're welcome to work on the project in groups and discuss ideas on the course wall, but <b> please prepare your own write-up (with your own code). </b>
+
+If you're interested, check out these links related to digit recognition:
+
+Yann Lecun's MNIST benchmarks: http://yann.lecun.com/exdb/mnist/
+
+Stanford Streetview research and data: http://ufldl.stanford.edu/housenumbers/
+
+```{r}
+library(dplyr)
+library(ggplot2)
+```
+
+
+```{r}
+# Set the randomizer seed so results are the same each time.
+set.seed(0)
+```
+
+# Load data
+
+Load the data. Notice that we are splitting the data into training, development, and test. We also have a small subset of the training data called mini_train_data and mini_train_labels that you should use in all the experiments below, unless otherwise noted.
+
+```{r}
+# https://www.r-bloggers.com/exploring-handwritten-digit-classification-a-tidy-analysis-of-the-mnist-dataset/
+# https://pjreddie.com/projects/mnist-in-csv/
+#
+# we're getting our particular data from the jupyter notebook's output, 
+# so the format is slightly different from the online version
+
+images <- readr::read_csv("../data/raw/mnist-train-images.csv", col_names = FALSE)
+labels <- readr::read_csv("../data/raw/mnist-train-labels.csv", col_names = FALSE)
+```
+
+
+
+```{r}
+images %>% dim()
+```
+
+
+```{r}
+images %>% slice(1) %>% unlist(., use.names=FALSE)
+```
+
+```{r}
+labels %>% dim()
+```
+
+## Rescale the input
+
+```{r}
+images <- images / 255
+```
+
+```{r}
+images %>% slice(1) %>% unlist(., use.names=FALSE)
+```
+
+
+# Shuffle, split into train and test
+
+```{r}
+
+```
+
