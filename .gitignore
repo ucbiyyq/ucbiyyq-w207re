@@ -4,3 +4,4 @@
 .Ruserdata
 data/raw/mnist-train-images.csv
 data/raw/mnist-train-labels.csv
+notebooks/.ipynb_checkpoints
